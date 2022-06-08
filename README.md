@@ -31,12 +31,12 @@ Our code is based on the following dependencies
 We use Resnet-50, VGG-16, and Inpcetion-v3 pretrained with Pytorch as the target models.
 To reproduce the results in our paper, run:
 ```sh
-python main.py --model resnet -- attack sh --loss ce --idxs idxs/resnet.npy
-python main.py --model vgg -- attack sh --loss ce --idxs idxs/vgg.npy
-python main.py --model inception -- attack sh --loss ce --idxs idxs/inception.npy
+python main.py --model resnet --attack sh --loss ce --idxs idxs/resnet.npy
+python main.py --model vgg --attack sh --loss ce --idxs idxs/vgg.npy
+python main.py --model inception --attack sh --loss ce --idxs idxs/inception.npy
 ```
 ```sh
-python main.py --model resnet -- attack ash --loss cw --idxs idxs/resnet.npy
-python main.py --model vgg -- attack ash --loss cw --idxs idxs/vgg.npy
-python main.py --model inception -- attack ash --loss cw --idxs idxs/inception.npy
+python main.py --model resnet --attack ash --loss cw --idxs idxs/resnet.npy
+python main.py --model vgg --attack ash --loss cw --idxs idxs/vgg.npy
+python main.py --model inception --attack ash --loss cw --idxs idxs/inception.npy
 ```
