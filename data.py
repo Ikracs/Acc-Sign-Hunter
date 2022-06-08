@@ -7,7 +7,7 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 from torchvision.datasets import ImageFolder
 
-IMAGENET_ROOT = '/mnt/datadev_2/std/lisiyuan/imagenet'
+IMAGENET_ROOT = 'YOUR_DATA_ROOT'
 
 IMAGENET_TRANS = transforms.Compose([
     transforms.Resize(256),
