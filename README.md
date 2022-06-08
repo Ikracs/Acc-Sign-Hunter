@@ -12,15 +12,15 @@ Moreover, our ASH method is out-of-the-box since there are no hyperparameters th
 ### About the paper
 Illustration of our proposed Accelerated Sign Hunter:
 
-<img src="figures/illustration.PNG#pic_center" width=800>
+<img src="figures/illustration.PNG#pic_center" width=600>
 
 Results of our ASH compared to other black-box attacks:
 
-<img src="figures/results.PNG#pic_center" width=800>
+<img src="figures/results.PNG#pic_center" width=600>
 
 Visualization of adversarial examples crafted by ASH and its baseline:
 
-<img src="figures/visualization.PNG#pic_center" width=800>
+<img src="figures/visualization.PNG#pic_center" width=600>
 
 ## Running the code
 ### Requirements
