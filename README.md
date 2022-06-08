@@ -1,4 +1,6 @@
-# Accelerated Sign Hunter: a Sign-based Black-box Attack via Branch-Prune Strategy and Stabilized Hierarchical Search
+# Accelerated Sign Hunter
+
+This is the code for our paper "Accelerated Sign Hunter: a Sign-based Black-box Attack via Branch-Prune Strategy and Stabilized Hierarchical Search", which has been accepted by IMCR, 2022.
 
 ### Abstract
 We propose the Accelerated Sign Hunter (ASH), a sign-based black-box attack under $l_\infty$ constraint. The proposed method searches an approximate gradient sign of loss *w.r.t.* the input image with few queries to the target model and crafts the adversarial example by updating the input image in this direction. It applies a Branch-Prune Strategy that infers the unknown sign bits according to the checked ones to avoid unnecessary queries. 
