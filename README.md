@@ -14,7 +14,7 @@ Illustration of our proposed Accelerated Sign Hunter:
 
 Results of our ASH compared to other black-box attacks:
 
-<img src="figures/results.PNG#pic_center" width=450>
+<img src="figures/results.PNG#pic_center" width=800>
 
 Visualization of adversarial examples crafted by ASH and its baseline:
 
@@ -28,7 +28,8 @@ Our code is based on the following dependencies
 - numpy == 1.19.5
 - matplotlib == 2.0.0
 
-We use Resnet-50, VGG-16, and Inpcetion-v3 pretrained with Pytorch as the target models.
+Resnet-50, VGG-16, and Inpcetion-v3 pretrained with Pytorch are used as the target models.
+We only conduct attack on correctly classified images.
 To reproduce the results in our paper, run:
 ```sh
 python main.py --model resnet --attack sh --loss ce --idxs idxs/resnet.npy
