@@ -125,6 +125,8 @@ def accelerated_sign_hunter(model, imgs, labels, config):
             print('Attack fails, ', end='')
             print('final class: {:s}'.format(label_to_name(adv_label)))
     
+    adv_imgs, adv_labels = np.concatenate(adv_imgs), np.array(adv_labels)
+    
     if log_root is not None:
         total_num_queries = np.array(total_num_queries)
         for i_iter in range(0, budget, log_freq):
