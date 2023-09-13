@@ -1,0 +1,7 @@
+{
+    "epsilon": 0.05,
+    "noisy": 0.0,
+    "alpha": 5e-3,
+    "momentum": 0.5,
+    "iter_n": 10
+}
