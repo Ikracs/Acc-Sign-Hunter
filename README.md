@@ -25,21 +25,17 @@ Visualization of adversarial examples crafted by ASH and its baseline:
 ## Running the code
 ### Requirements
 Our code is based on the following dependencies
-- pytorch == 1.6.0
-- torchvision == 0.7.0
-- numpy == 1.19.5
-- matplotlib == 2.0.0
+- pytorch == 1.10.2
+- torchvision == 0.11.3
+- numpy == 1.21.5
+- matplotlib == 3.5.3
+- timm == 0.6.13
 
-Resnet-50, VGG-16, and Inception-v3 pretrained with Pytorch are used as the target models.
-We only conduct attack on correctly classified images.
-To reproduce the results in our paper, run:
+***NEW:*** We added models with various architectures provided by [timm](https://github.com/huggingface/pytorch-image-models) as target models.
+
+Attack is only conducted on correctly classified images.
+Use the following command to launch an SH/ASH attack:
 ```sh
-python main.py --model resnet --attack sh --loss ce --idxs idxs/resnet.npy
-python main.py --model vgg --attack sh --loss ce --idxs idxs/vgg.npy
-python main.py --model inception --attack sh --loss ce --idxs idxs/inception.npy
-```
-```sh
-python main.py --model resnet --attack ash --loss cw --idxs idxs/resnet.npy
-python main.py --model vgg --attack ash --loss cw --idxs idxs/vgg.npy
-python main.py --model inception --attack ash --loss cw --idxs idxs/inception.npy
+python main.py --attack ATTACK --config CFG_FILE_PTH --model MODEL --dataset imaegent-1k \
+--loss cw --batch_size 100 --gpu YOUR_GPU_ID --log_root logs --verbose --print_freq 100 --early_stop
 ```
