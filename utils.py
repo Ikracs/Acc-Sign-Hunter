@@ -110,14 +110,3 @@ def concat_info_over_batches(v: List [List]):
 
 def calculate_adv_accuracy(accuracy, asr):
     return accuracy * (1 - asr)
-
-
-def calculate_cos_sim(t1, t2, reduction=True):
-    assert t1.shape == t2.shape, "Tha shape of t1 and t2 are dismatched!"
-    _flatten = lambda x: x.view(x.shape[0], -1)
-    _normalize = lambda x: x / x.norm(p=2, dim=-1, keepdim=True)
-
-    t1 = _normalize(_flatten(t1))
-    t2 = _normalize(_flatten(t2))
-    cos_sim = (t1 * t2).sum(dim=-1)
-    return cos_sim.mean() if reduction else cos_sim
